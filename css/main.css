@@ -1,0 +1,65 @@
+html{
+    box-sizing: border-box;
+}
+
+*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.muisc-app-container{
+    border: 2px solid;
+    width: 60%;
+    margin: 8em auto;
+    text-align: center;
+    background: #B3F35C;
+    border-radius: 15px;
+    padding: 1.1em;
+}
+
+.music-cover{
+    max-width: 20%;
+    border-radius: 15px;
+}
+
+.play-circle{
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.pause-icon-container{
+    display: none;
+}
+
+.showPauseButton{
+    display: block;
+}
+
+.hidePlayButton{
+    display: none;
+}
+
+.pause-circle{
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.play-skip-back{
+    cursor: pointer;
+}
+
+.play-skip-forward{
+    cursor: pointer;
+}
+
+.audio-control-buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
