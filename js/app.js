@@ -15,9 +15,6 @@ let music_arr = ["assets/music/01_Vries_Lose_Traction.mp3","assets/music/02_Shaw
 
 // const music_player_duration = document.querySelector(".music-player-duration");
 
-artist.textContent = `${audio_player.src.split("/")[5].split("_")[1]}`;
-song_name.textContent = `${audio_player.src.split("/")[5].split("_")[2] + " " + audio_player.src.split("/")[5].split("_")[3].split(".")[0]}`;
-
 play_circle.addEventListener("click",()=>{
     audio_player.play();
     pause_icon_container.classList.toggle("showPauseButton")
@@ -74,6 +71,10 @@ play_skip_back.addEventListener("click", ()=>{
     // audio_player.setAttribute("src", music_arr[0]);
     // console.log(`${audio_player.src.split("/")[3] + '/' + audio_player.src.split("/")[4] + '/' + audio_player.src.split("/")[5]}`)
 })
+
+
+artist.textContent = `${audio_player.src.split("/")[5].split("_")[1]}`;
+song_name.textContent = `${audio_player.src.split("/")[5].split("_")[2] + " " + audio_player.src.split("/")[5].split("_")[3].split(".")[0]}`;
 
 // music_player_duration.addEventListener("change",()=>{
 //     // music_player_duration.max = audio_player.duration;
