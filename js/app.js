@@ -32,7 +32,7 @@ play_skip_forward.addEventListener("click",()=>{
     console.log('here')
     for(let x = 0; x < music_arr.length; x++){
         if(`${audio_player.src.split("/")[3] + '/' + audio_player.src.split("/")[4] + '/' + audio_player.src.split("/")[5]}` === music_arr[x]){
-            if(`${audio_player.src.split("/")[3] + '/' + audio_player.src.split("/")[4] + '/' + audio_player.src.split("/")[5]}` === music_arr[5]){
+            if(`${audio_player.src.split("/")[6]}` === music_arr[5]){
                 audio_player.setAttribute("src", music_arr[0])
             }else{
                 keepVal++
@@ -42,7 +42,7 @@ play_skip_forward.addEventListener("click",()=>{
                 audio_player.setAttribute("src", music_arr[keepVal]);
                 audio_player.autoplay = true;
                 artist.textContent = `${audio_player.src.split("/")[5].split("_")[1]}`;
-                song_name.textContent = `${audio_player.src.split("/")[5].split("_")[2] + " " + audio_player.src.split("/")[5].split("_")[3].split(".")[0]}`;
+                song_name.textContent = `${audio_player.src.split("/")[6].split("_")[2]}`;
                 break;
             }
         }
@@ -55,8 +55,8 @@ play_skip_forward.addEventListener("click",()=>{
 play_skip_back.addEventListener("click", ()=>{
     console.log('heresfdd')
     for(let x = 0; x < music_arr.length; x++){
-        if(`${audio_player.src.split("/")[3] + '/' + audio_player.src.split("/")[4] + '/' + audio_player.src.split("/")[5]}` === music_arr[x]){
-            if(`${audio_player.src.split("/")[3] + '/' + audio_player.src.split("/")[4] + '/' + audio_player.src.split("/")[5]}` === music_arr[0]){
+        if(`${audio_player.src.split("/")[6]}` === music_arr[x]){
+            if(`${audio_player.src.split("/")[6]}` === music_arr[0]){
                 audio_player.setAttribute("src", music_arr[music_arr.length]);
             }else{
                 keepVal--
@@ -65,7 +65,8 @@ play_skip_back.addEventListener("click", ()=>{
                 }
                 audio_player.setAttribute("src", music_arr[keepVal]);
                 audio_player.autoplay = true;
-                artist.textContent =  audio_player.src.split("/")[5];
+                artist.textContent =  audio_player.src.split("/")[6].split("_")[1];
+                song_name.textContent = `${audio_player.src.split("/")[6].split("_")[2]}`;
                 break;
             }
         }
