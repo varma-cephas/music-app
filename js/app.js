@@ -73,8 +73,8 @@ play_skip_back.addEventListener("click", ()=>{
 })
 
 
-artist.textContent = `${audio_player.src.split("/")[5].split("_")[1]}`;
-song_name.textContent = `${audio_player.src.split("/")[5].split("_")[2] + " " + audio_player.src.split("/")[5].split("_")[3].split(".")[0]}`;
+artist.textContent = `${audio_player.src.split("/")[6].split("_")[1]}`;
+song_name.textContent = `${`${audio_player.src.split("/")[6].split("_")[2] + " "+ audio_player.src.split("/")[6].split("_")[3].split(".")[0]}`}`;
 
 // music_player_duration.addEventListener("change",()=>{
 //     // music_player_duration.max = audio_player.duration;
