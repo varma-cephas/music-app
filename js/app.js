@@ -29,9 +29,8 @@ pause_circle.addEventListener("click",()=>{
 let keepVal = 0;
 
 play_skip_forward.addEventListener("click",()=>{
-    console.log('here')
     for(let x = 0; x < music_arr.length; x++){
-        if(`${audio_player.src.split("/")[3] + '/' + audio_player.src.split("/")[4] + '/' + audio_player.src.split("/")[5]}` === music_arr[x]){
+        if(`${audio_player.src.split("/")[6]}` === music_arr[x]){
             if(`${audio_player.src.split("/")[6]}` === music_arr[5]){
                 audio_player.setAttribute("src", music_arr[0])
             }else{
@@ -39,6 +38,7 @@ play_skip_forward.addEventListener("click",()=>{
                 if(keepVal > 4){
                     keepVal = 0;
                 }
+                console.log('here')
                 audio_player.setAttribute("src", music_arr[keepVal]);
                 audio_player.autoplay = true;
                 artist.textContent = `${audio_player.src.split("/")[5].split("_")[1]}`;
@@ -53,7 +53,6 @@ play_skip_forward.addEventListener("click",()=>{
 
 
 play_skip_back.addEventListener("click", ()=>{
-    console.log('heresfdd')
     for(let x = 0; x < music_arr.length; x++){
         if(`${audio_player.src.split("/")[6]}` === music_arr[x]){
             if(`${audio_player.src.split("/")[6]}` === music_arr[0]){
@@ -63,6 +62,7 @@ play_skip_back.addEventListener("click", ()=>{
                 if(keepVal === 0){
                     keepVal = 4;
                 }
+                console.log('heresfdd')
                 audio_player.setAttribute("src", music_arr[keepVal]);
                 audio_player.autoplay = true;
                 artist.textContent =  audio_player.src.split("/")[6].split("_")[1];
