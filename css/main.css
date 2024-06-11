@@ -63,3 +63,7 @@ body{
     justify-content: center;
     gap: 2em;
 }
+
+.nav-buttons{
+    border: 2px solid;
+}
