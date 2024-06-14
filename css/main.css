@@ -67,3 +67,14 @@ body{
 .nav-buttons{
     border: 2px solid;
 }
+
+.time-seeker-container{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    justify-content: center;
+}
+
+input[type="range"]{
+    accent-color: #111;
+}
