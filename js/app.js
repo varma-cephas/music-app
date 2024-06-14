@@ -47,7 +47,7 @@ play_skip_forward.addEventListener("click",()=>{
                     }else{
                         music_seconds_remaining.textContent = Math.floor(audio_player.duration % 60);
                     }
-                },500)
+                },2000)
             }else{
                 keepVal++
                 if(keepVal > 4){
@@ -66,7 +66,7 @@ play_skip_forward.addEventListener("click",()=>{
                     }else{
                         music_seconds_remaining.textContent = Math.floor(audio_player.duration % 60);
                     }
-                },500)
+                },2000)
                 break;
             }
         }
@@ -83,7 +83,7 @@ play_skip_back.addEventListener("click", ()=>{
                 audio_player.setAttribute("src", `assets/music/${music_arr[4]}`);
                 setTimeout(()=>{
                     music_minutes_remaining.textContent = Math.floor(audio_player.duration / 60);
-                },500)
+                },2000)
             }else{
                 keepVal--
                 if(keepVal === 0){
@@ -102,7 +102,7 @@ play_skip_back.addEventListener("click", ()=>{
                     }else{
                         music_seconds_remaining.textContent = Math.floor(audio_player.duration % 60);
                     }
-                },500)
+                },2000)
                 break;
             }
         }
@@ -122,7 +122,7 @@ setTimeout(()=>{
     }else{
         music_seconds_remaining.textContent = Math.floor(audio_player.duration % 60);
     }
-},500)
+},2000)
 
 audio_player.addEventListener("loadedmetadata", ()=>{
     music_player_duration.max = audio_player.duration;
